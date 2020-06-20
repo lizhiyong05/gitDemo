@@ -1,0 +1,199 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/home"
+		},
+		{
+			"path": "pages/index/index"
+		},
+		{
+			"path": "pages/classification/classification",
+			"style": {}
+		},
+		{
+			"path": "pages/home/selectRegion",
+			"style": {}
+		},
+		{
+			"path": "pages/video/video",
+			"style": {
+				"app-plus": {
+					"subNVues": [{ //自定义头
+						"id": "nav",
+						"path": "pages/video/subNVue/videoHeadNav",
+						"type": "navigationBar",
+						"style": {
+							"position": "absolute",
+							"height": "44px",
+							"right": "0"
+						}
+					}]
+				}
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {}
+		},
+		{
+			"path": "pages/release/release",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/release/sendMsg",
+			"style": {}
+		},
+		{
+			"path": "pages/release/sendDemand"
+		},
+		{
+			"path": "pages/release/sendRecruit",
+			"style": {}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {}
+		},
+		{
+			"path": "pages/login/register",
+			"style": {}
+		},
+		{
+			"path": "pages/login/loginCode",
+			"style": {}
+		},
+		{
+			"path": "pages/login/changePasswordStep1",
+			"style": {}
+		},
+		{
+			"path": "pages/login/changePasswordStep2",
+			"style": {}
+		}, {
+			"path": "pages/classification/productList",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/classification/productDetail",
+			"style": {}
+		}, {
+			"path": "pages/video/releaseVideo",
+			"style": {}
+		}, {
+			"path": "pages/my/collection/collection",
+			"style": {}
+		}, {
+			"path": "pages/identity/identity",
+			"style": {}
+		}, {
+			"path": "pages/video/myVideo",
+			"style": {
+				"app-plus": {
+					"subNVues": [{ //自定义头
+						"id": "myVideoNav",
+						"path": "pages/video/subNVue/myVideoHeadNav",
+						"type": "navigationBar",
+						"style": {
+							"position": "absolute",
+							"height": "44px",
+							"right": "0"
+						}
+					}]
+				}
+			}
+		}
+
+	    ,{
+            "path" : "pages/my/footprint/footprint",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/myNeeds/myNeeds",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/feedBack",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/personal/index",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/setting/index",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/personal/changeName",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/personal/changeTel",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/personal/changePasswordStep2",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/release/information/information",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/release/information/myInformation",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/personal/changePasswordStep1",
+            "style" : {}
+        }
+    ],
+	"globalStyle": { // 头部导航栏设置
+		"navigationBarTextStyle": "black", // 导航栏标题颜色及状态栏前景颜色
+		"navigationStyle": "custom" // 即取消默认的原生导航栏
+	},
+	"tabBar": { // 底部导航设置
+		"color": "#999999",
+		"selectedColor": "#22B92C",
+		"backgroundColor": "#ffffff",
+		"iconWidth": 20,
+		// #ifdef APP-PLUS
+		"borderStyle": "#dadada",
+		// #endif
+		"height": "55",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "static/image/footer/footer-icon1.png",
+				"selectedIconPath": "static/image/footer/footer-icon1-selected.png"
+			},
+			{
+				"pagePath": "pages/classification/classification",
+				"text": "分类",
+				"iconPath": "static/image/footer/footer-icon2.png",
+				"selectedIconPath": "static/image/footer/footer-icon2-selected.png"
+			},
+			{
+				"pagePath": "pages/release/release",
+				"text": "发布",
+				"iconPath": "static/image/footer/footer-icon3.png",
+				"selectedIconPath": "static/image/footer/footer-icon3-selected.png"
+			},
+			{
+				"pagePath": "pages/video/video",
+				"text": "视频",
+				"iconPath": "static/image/footer/footer-icon4.png",
+				"selectedIconPath": "static/image/footer/footer-icon4-selected.png"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "static/image/footer/footer-icon5.png",
+				"selectedIconPath": "static/image/footer/footer-icon5-selected.png"
+			}
+		]
+	}
+}

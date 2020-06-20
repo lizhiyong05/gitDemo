@@ -1,0 +1,82 @@
+<template>
+	<div class="header" id="myVideoNav">
+		<div class="head-back">
+			<image src="@/static/image/header/back.png" @tap="navigateBack" class="back-icon"></image>
+		</div>
+		<div class="tab-head">
+			<text :class="{'select-tab-head': selectTabIndex == 0}" @tap="changeTab(0)" class="tab">我的视频</text>
+			<text :class="{'select-tab-head': selectTabIndex == 1}" @tap="changeTab(1)" class="tab">我的喜欢</text>
+		</div>
+		<div class="select-tab-line" :class="{'no1': selectTabIndex == 0,'no2': selectTabIndex == 1}"></div>
+	</div>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				selectTabIndex: 0
+			}
+		},
+		methods: {
+			navigateBack() { // 返回上一页
+				uni.navigateBack();
+			},
+			changeTab(ind) { // 点击tab
+				this.selectTabIndex = ind;
+				uni.$emit('changeTab',ind);
+			}
+		}
+	}
+</script>
+
+<style>
+	.header {
+		padding-top: 44rpx;
+		border-width: 1rpx;
+		border-style: solid;
+		border-color: #e5e5e5;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		background-color: #ffffff;
+		position: relative;
+	}
+	.head-back {
+		position: absolute;
+		left: 24rpx;
+	}
+	.back-icon {
+		width: 20rpx;
+		height: 34rpx;
+		border-radius: 50%;
+		margin-left: 26rpx;
+	}
+	.tab-head {
+		flex-direction: row;
+	}
+	.tab {
+		color: #333333;
+		font-size: 34rpx;
+		padding: 0 45rpx;
+	}
+	.select-tab-head {
+		color: #22B92C;
+	}
+	.select-tab-line {
+		width: 30rpx;
+		height: 4rpx;
+		background-color: #22B92C;
+		border-radius: 6rpx;
+		position: absolute;
+		bottom: -4rpx;
+	}
+	.no1{
+		left: 130%;
+	}
+	.no2{
+		left: 248%;
+	}
+	
+	
+</style>

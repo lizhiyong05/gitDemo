@@ -1,0 +1,78 @@
+<template>
+	<div id="nav" class="header">
+		<div class="head-portrait">
+			<image src="@/static/image/video/head-portrait.jpg" @tap="jumpMyVideo" class="head-portrait-img"></image>
+		</div>
+		<div class="title">
+			<text class="title-text">视频</text>
+		</div>
+		<div class="record">
+			<image src="@/static/image/video/video-icon.png" @click="jumpRelease" class="video-icon-img"></image>
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		data() {
+
+		},
+		methods: {
+			jumpMyVideo() { //跳转我的视频
+				
+				uni.navigateTo({
+				    url:'/pages/video/myVideo'
+				});
+			},
+			jumpRelease() {
+				uni.navigateTo({
+				    url:'/pages/video/releaseVideo'
+				});
+			}
+		}
+	}
+</script>
+
+<style>
+	.header {
+		padding-top: 44rpx;
+		border-width: 1rpx;
+		border-style: solid;
+		border-color: #e5e5e5;
+		background-color: #ffffff;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.head-portrait {
+		flex: 1;
+
+	}
+
+	.head-portrait-img {
+		width: 50rpx;
+		height: 50rpx;
+		border-radius: 50%;
+		margin-left: 26rpx;
+	}
+
+	.title {
+		flex: 2;
+	}
+
+	.title-text {
+		text-align: center;
+		font-size: 38rpx;
+		color: #333333;
+	}
+
+	.record {
+		flex: 1;
+	}
+
+	.video-icon-img {
+		width: 45rpx;
+		height: 31rpx;
+		margin-left: 120rpx;
+	}
+</style>
